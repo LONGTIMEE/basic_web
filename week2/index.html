@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ทดลองเหตุการณ์ในอดีตของMr.Ghak</title>
+        <style>
+            input{
+                width: 401px;
+                background-color: aquamarine;
+                color: yellow;
+            }
+            select{
+                background-color: aquamarine;
+                padding: 20px;
+                border-radius: 4000px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>ทดสอบใส่input</h2>
+        <p id="show-msg">ทดสอบกรอกข้อความ: </p>
+        <input id="msg-input" placeholder="ชื่อ" type="text"> 
+        <h2>ทดสอบการเลือกเเบบ select</h2>
+        
+        <p id="show-select-msg">ทดสอบกรอกตัวเลือก: </p>
+        <select id="select-Input">
+            <option>โปรดเลือก</option>
+             <option>ตัวเลือก1</option>
+              <option>ตัวเลือก2</option>
+               <option>ตัวเลือก3</option>
+        </select>
+
+        <script>
+            const inPutElement = document.getElementById('msg-input')
+            inPutElement.addEventListener("input",function() {
+                // console.log(this.value)
+                const msg = this.value
+                const showMsgElement= document.getElementById('show-msg')
+                showMsgElement.innerText = 'ข้อความที่อ่านได้: ' + msg
+            })
+            // inPutElement.value
+            // console.log(inPutElement)
+            const inPutSelectElement = document.getElementById('select-Input')
+            inPutSelectElement.addEventListener("input",function() {
+                // console.log(this.value)
+                const msg = this.value
+                const showMsgElement= document.getElementById('show-select-msg')
+                showMsgElement.innerText = 'ข้อความที่อ่านได้: ' + msg
+            })
+
+        </script>
+    </body>
+</html>

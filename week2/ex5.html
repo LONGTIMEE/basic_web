@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>งาน</title>
+        <style>
+            input{
+                width: 401px;
+                background-color: aquamarine;
+                color: yellow;
+                
+            }
+            select{
+                background-color: aquamarine;
+                padding: 20px;
+                border-radius: 4000px;
+                color: chocolate;
+                
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h2>ทดสอบใส่input</h2>
+        <p id="show-msg">ทดสอบกรอกข้อความ: </p>
+        <input id="msg-input" placeholder="ชื่อ" type="text"> 
+        <h2>ทดสอบการเลือกเเบบ select</h2>
+        
+        <p id="show-select-msg">ทดสอบกรอกตัวเลือก: </p>
+        <select id="select-Input">
+            <option>โปรดเลือกตัวเลือก</option>
+             <option>JavaScript</option>
+              <option>Java</option>
+               <option>Python</option>
+                <option>C++</option>
+                 <option>C##</option>
+        </select>
+
+        <script>
+            const inPutElement = document.getElementById('msg-input')
+            inPutElement.addEventListener("input",function() {
+                // console.log(this.value)
+                const msg = this.value
+                const showMsgElement= document.getElementById('show-msg')
+                showMsgElement.innerText = 'ยินดีที่ต้อนรับ: ' + msg
+            })
+            // inPutElement.value
+            // console.log(inPutElement)
+            const inPutSelectElement = document.getElementById('select-Input')
+            inPutSelectElement.addEventListener("change",function() {
+                // console.log(this.value)
+                const msg = this.value
+                const showMsgElement= document.getElementById('show-select-msg')
+                showMsgElement.innerText = 'คุณเลือกภาษา: ' + msg
+            })
+
+        </script>
+    </body>
+</html>
